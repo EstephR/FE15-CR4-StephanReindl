@@ -1,0 +1,41 @@
+.mainfooter {
+    @include flex();
+    flex-direction: column;
+    padding: 20px;
+    color: white;
+    .social-media {
+        @include flex();
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .newsletter {
+        @include flex();
+        margin-top: 20px;
+        margin-bottom: 50px;
+        width: 100%;
+        .newsletter-text {
+            font-weight: bold;
+        }
+        .newsletter-input {
+            width: 25%;
+            height: 50px;
+            margin: auto 20px;
+            border-radius: 5px;
+        }
+        .newsletter-button {
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            background: transparent;
+            border: 1px solid white;
+            transition: 200ms ease;
+            &:hover {
+                background: white;
+                color: black;
+            }
+        }
+    }
+}
