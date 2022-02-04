@@ -2,63 +2,63 @@ let tasks = `[{
         "taskName": "Grocery Shopping",
         "image": "../img/grocery.jpg",
         "description": "Grocery shopping at Hofer and Billa",
-        "importance": 5,
+        "importance": 0,
         "deadline": "07.02.2022"
     },
     {
         "taskName": "Dinner",
         "image": "../img/dinner.jpg",
-        "description": "Having dinner with friends",
-        "importance": 1,
+        "description": "Have dinner with friends",
+        "importance": 0,
         "deadline": "11.02.2022"
     },
     {
         "taskName": "Dog Sitting",
         "image": "../img/dogsitting.jpg",
         "description": "Sit our lovely furry friend Monty",
-        "importance": 2,
+        "importance": 0,
         "deadline": "08.02.2022"
     },
     {
         "taskName": "Housekeeping",
         "image": "../img/housekeeping.jpg",
         "description": "Clean up the whole flat",
-        "importance": 4,
+        "importance": 0,
         "deadline": "05.02.2022"
     },
     {
         "taskName": "Reading",
         "image": "../img/reading.jpg",
         "description": "Read that book about Angular",
-        "importance": 2,
+        "importance": 0,
         "deadline": "09.02.2022"
     },
     {
         "taskName": "Coding",
         "image": "../img/coding.jpg",
         "description": "Continue Coding at CF",
-        "importance": 5,
+        "importance": 0,
         "deadline": "ongoing"
     },
     {
         "taskName": "Play Guitar",
         "image": "../img/rockinout.jpg",
         "description": "Laying down some riffs",
-        "importance": 1,
+        "importance": 0,
         "deadline": "10.02.2022"
     },
     {
         "taskName": "Running",
         "image": "../img/running.jpg",
         "description": "get prepared for the Half-Marathon",
-        "importance": 4,
+        "importance": 0,
         "deadline": "ongoing"
     },
     {
         "taskName": "Workout",
         "image": "../img/workout.jpg",
-        "description": "support Marathon training with bodyweight excercises",
-        "importance": 2,
+        "description": "back running with some strength",
+        "importance": 0,
         "deadline": "ongoing"
     }
 ]`

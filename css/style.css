@@ -22,6 +22,24 @@
   font-size: 1.5em;
 }
 
+.button {
+  transition: 500ms ease;
+}
+.button:hover {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+#headline-icon {
+  transition: 500ms ease;
+}
+#headline-icon:hover {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
 .hero {
   position: relative;
   width: 100%;
@@ -55,6 +73,7 @@
   flex-direction: column;
   padding: 20px;
   color: white;
+  margin-top: 2%;
 }
 .mainfooter .social-media {
   display: flex;
