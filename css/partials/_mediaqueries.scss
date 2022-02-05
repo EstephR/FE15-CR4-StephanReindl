@@ -3,6 +3,21 @@
         flex-direction: column;
     }
     .newsletter-input {
-        width: 200px;
+        width: 70% !important;
+        margin: 20px auto !important;
+    }
+    .headline h1 {
+        font-size: 1.5em;
+    }
+    .headline-right-text {
+        font-size: 1em !important;
+    }
+    #headline-icon {
+        width: 20px;
+        height: 20px;
+    }
+    .hero-text {
+        height: 30vw !important;
+        font-size: 6vw !important;
     }
 }
