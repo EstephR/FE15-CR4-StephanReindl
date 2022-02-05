@@ -1,10 +1,11 @@
 var data = JSON.parse(tasks);
 var resultEl = document.getElementById("result");
-var sortArray = [];
 
 // create cards dynamically
-for (let index in data) {
-    resultEl.innerHTML += `<div class="card p-0 m-3 shadow border-0 col-lg-4 col-md-6 col-sm-12" style="width: 18rem;">
+function addCardGrid() {
+    resultEl.innerHTML = ``;
+    for (let index in data) {
+        resultEl.innerHTML += `<div class="card p-0 m-3 shadow border-0 col-lg-4 col-md-6 col-sm-12" style="width: 18rem;">
     <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
         <div class="h6">Task</div>
         <div class="card-icons">
@@ -39,33 +40,42 @@ for (let index in data) {
         </button>
     </div>
 </div>`
+    }
+    // Looping through elements to add eventlisteners
+    for (let index in data) {
+        document.getElementsByClassName("button")[index].addEventListener("click", function() {
+            var priorityEl = document.getElementById(`priority${index}`);
+            // Avoid values higher than 5
+            if (priorityEl.innerText < 5) {
+                priorityEl.innerText++;
+                // also increment the importance index itself
+                data[index].importance++;
 
-    sortArray.push(data[index].importance);
+            }
+            // add Bootstrap colors
+            if (priorityEl.innerText <= 1) {
+                priorityEl.classList.add("bg-success");
+            } else if (priorityEl.innerText <= 3) {
+                priorityEl.classList.add("bg-warning");
+            } else {
+                priorityEl.classList.add("bg-danger");
+            }
+        })
+    }
 }
 
-// Looping through elements to add eventlisteners
-for (let index in data) {
-    document.getElementsByClassName("button")[index].addEventListener("click", function() {
-        var priorityEl = document.getElementById(`priority${index}`);
-        // Avoid values higher than 5
-        if (priorityEl.innerHTML < 5) {
-            priorityEl.innerHTML++;
-        }
-        // add Bootstrap colors
-        if (priorityEl.innerHTML <= 1) {
-            priorityEl.classList.add("bg-success");
-        } else if (priorityEl.innerHTML <= 3) {
-            priorityEl.classList.add("bg-warning");
-        } else {
-            priorityEl.classList.add("bg-danger");
-        }
+//initialize Card Grit for the first time
+addCardGrid();
+
+//Create sort Function
+function sortAlgorithm() {
+    data.sort(function(firstNumber, secondNumber) {
+        return secondNumber.importance - firstNumber.importance;
     })
 }
 
-function Sort() {
-    console.log(sortArray);
-}
-
-
-//Sort Elements
-document.getElementById("headline-icon").addEventListener("click", Sort);
+//Add Eventlistener for Sort Button
+document.getElementById("headline-icon").addEventListener("click", function() {
+    sortAlgorithm();
+    addCardGrid();
+});

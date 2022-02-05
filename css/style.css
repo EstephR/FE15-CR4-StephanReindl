@@ -113,4 +113,14 @@
 .mainfooter .newsletter .newsletter-button:hover {
   background: white;
   color: black;
+}
+
+@media screen and (max-width: 485px) {
+  .newsletter {
+    flex-direction: column;
+  }
+
+  .newsletter-input {
+    width: 200px;
+  }
 }/*# sourceMappingURL=style.css.map */

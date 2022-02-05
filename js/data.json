@@ -1,62 +1,62 @@
 let tasks = `[{
         "taskName": "Grocery Shopping",
-        "image": "../img/grocery.jpg",
+        "image": "img/grocery.jpg",
         "description": "Grocery shopping at Hofer and Billa",
         "importance": 0,
         "deadline": "07.02.2022"
     },
     {
         "taskName": "Dinner",
-        "image": "../img/dinner.jpg",
+        "image": "img/dinner.jpg",
         "description": "Have dinner with friends",
         "importance": 0,
         "deadline": "11.02.2022"
     },
     {
         "taskName": "Dog Sitting",
-        "image": "../img/dogsitting.jpg",
+        "image": "img/dogsitting.jpg",
         "description": "Sit our lovely furry friend Monty",
         "importance": 0,
         "deadline": "08.02.2022"
     },
     {
         "taskName": "Housekeeping",
-        "image": "../img/housekeeping.jpg",
+        "image": "img/housekeeping.jpg",
         "description": "Clean up the whole flat",
         "importance": 0,
         "deadline": "05.02.2022"
     },
     {
         "taskName": "Reading",
-        "image": "../img/reading.jpg",
+        "image": "img/reading.jpg",
         "description": "Read that book about Angular",
         "importance": 0,
         "deadline": "09.02.2022"
     },
     {
         "taskName": "Coding",
-        "image": "../img/coding.jpg",
+        "image": "img/coding.jpg",
         "description": "Continue Coding at CF",
         "importance": 0,
         "deadline": "ongoing"
     },
     {
         "taskName": "Play Guitar",
-        "image": "../img/rockinout.jpg",
+        "image": "img/rockinout.jpg",
         "description": "Laying down some riffs",
         "importance": 0,
         "deadline": "10.02.2022"
     },
     {
         "taskName": "Running",
-        "image": "../img/running.jpg",
+        "image": "img/running.jpg",
         "description": "get prepared for the Half-Marathon",
         "importance": 0,
         "deadline": "ongoing"
     },
     {
         "taskName": "Workout",
-        "image": "../img/workout.jpg",
+        "image": "img/workout.jpg",
         "description": "back running with some strength",
         "importance": 0,
         "deadline": "ongoing"
