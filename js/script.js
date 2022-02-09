@@ -4,7 +4,16 @@ var resultEl = document.getElementById("result");
 // create cards dynamically
 function addCardGrid() {
     resultEl.innerHTML = ``;
+    // Check initial state of the colors
+    var color = "";
     for (let index in data) {
+        if (data[index].importance <= 1) {
+            color = "bg-success";
+        } else if (data[index].importance <= 3) {
+            color = "bg-warning";
+        } else {
+            color = "bg-danger";
+        }
         resultEl.innerHTML += `<div class="card p-0 m-3 shadow border-0 col-lg-4 col-md-6 col-sm-12" style="width: 18rem;">
     <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
         <div class="h6">Task</div>
@@ -21,7 +30,7 @@ function addCardGrid() {
         <div class="task-section d-flex">
             <img src="img/exclamation.png" alt="" width="20" height="20" class="button d-inline-block align-text-top me-1">
             <p>Priority level</p>
-            <p id="priority${index}" class="priority bg-success text-white ms-1 ps-2 pe-2 rounded">${data[index].importance}</p>
+            <p id="priority${index}" class="priority ${color} text-white ms-1 ps-2 pe-2 rounded">${data[index].importance}</p>
         </div>
         <div class="task-section d-flex">
             <img src="img/calendar.png" alt="" width="20" height="20" class="d-inline-block align-text-top me-1">
@@ -50,7 +59,6 @@ function addCardGrid() {
                 priorityEl.innerText++;
                 // also increment the importance index itself
                 data[index].importance++;
-
             }
             // add Bootstrap colors
             if (priorityEl.innerText <= 1) {
